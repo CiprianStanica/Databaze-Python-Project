@@ -44,15 +44,7 @@ class FisierTxt(Fisiere):
                 # Mutare în folderul backup_intrari
                 self.muta_fisier_backup(fisier_text)
                 return
-
-    # def muta_fisier_backup(self, fisier_text):
-    #     nume_fisier = os.path.basename(fisier_text)
-    #     folder_backup = "backup_intrari/"
-    #     cale_destinatie = os.path.join(folder_backup, nume_fisier)
-    #     os.makedirs(folder_backup, exist_ok=True)
-    #     shutil.move(fisier_text, cale_destinatie)
-    #     print(f"Fisierul a fost mutat in {cale_destinatie}")
-    
+   
     def muta_fisier_backup(self, fisier_text):
         nume_fisier = os.path.basename(fisier_text)
         folder_backup = "backup_intrari/"
@@ -62,19 +54,17 @@ class FisierTxt(Fisiere):
         return
 
 fisier_text = "intrari/Poarta1.txt"
-if not os.path.exists(fisier_text):
-    print("Nu a fost adaugat niciun fisier")
-else:
-    try:
-        # fisier_text = "intrari/Poarta1.txt"
-        txt_file = FisierTxt()
-        while True:
-            txt_file.citeste_text(fisier_text)
-            time.sleep(5)
-    # except FileNotFoundError as e:
-    #     print("Nu a fost adaugat niciun fisier")
-
-    except Exception as e:
-        print(f"Erroare: {e}")
-    finally:
-        txt_file.close_connection()
+while True:
+    if not os.path.exists(fisier_text):
+        print("Nu a fost adaugat niciun fisier")
+        time.sleep(5)
+    else:
+        try:
+            txt_file = FisierTxt()
+            while True:
+                txt_file.citeste_text(fisier_text)
+                time.sleep(5)
+        except FileNotFoundError as e:
+            print("Nu a fost adaugat niciun fisier")
+        finally:
+            txt_file.close_connection()
