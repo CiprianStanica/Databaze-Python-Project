@@ -36,7 +36,5 @@ def trimite_email(adresa_destinatar, subiect, mesaj, atasament=None):
 # Apelăm funcția pentru a trimite e-mailul
 trimite_email(
 'corina.ionita58@yahoo.com', 'subiect',
-"""Am rezolvat functia care trimite mail.
-Te iubesc
-Cred ca acum arata mai bine"""
+"""Incerc sa vad daca mai merge"""
 )

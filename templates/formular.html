@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formular Înregistrare</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    label, input, textarea {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    </style>
+
+    <script>
+        function showSuccessMessage() {
+            var successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Formular Înregistrare Utilizator</h1>
+    <form action="/register" method="post">
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" name="nume" required>
+
+        <label for="prenume">Prenume:</label>
+        <input type="text" id="prenume" name="prenume" required>
+
+        <label for="nume_companie">Nume Companie:</label>
+        <input type="text" id="nume_companie" name="nume_companie" required>
+
+        <label for="id_manager">ID Manager:</label>
+        <input type="text" id="id_manager" name="id_manager" required>
+
+        <input type="submit" value="Submit" onclick="showSuccessMessage()">
+    </form>
+    <button onclick="window.location.href = 'http://127.0.0.1:5000/';">HOME</button>
+
+    <div id="success-message" class="success-message" style="display: none;">
+        Utilizator înregistrat cu succes!
+    </div>
+</body>
+</html>
