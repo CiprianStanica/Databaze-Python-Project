@@ -1,0 +1,1 @@
+# Aceasta functie calculeaza orele lucrate de muncitorii introdusi in baza de date MySQL/ACCES
