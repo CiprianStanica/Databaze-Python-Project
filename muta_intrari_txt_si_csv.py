@@ -111,4 +111,3 @@ while True:
             csv_file.close_connection()
 
     time.sleep(5)
-
